@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+import { DragDropContext } from 'react-beautiful-dnd'
 import Column from '../Column/Column';
 import './App.scss'
 
@@ -25,12 +25,16 @@ function App() {
 
   return (
     <div className="app">
-      {state.columnOrder.map((columnId) => {
-        const column = state.columns[columnId]
-        const tasks = column.taskIds.map(taskId => state.tasks[taskId])
+      <DragDropContext
+        
+      >
+        {state.columnOrder.map((columnId) => {
+          const column = state.columns[columnId]
+          const tasks = column.taskIds.map(taskId => state.tasks[taskId])
 
-        return <Column key={column.id} column={column} tasks={tasks} />
-      })}
+          return <Column key={column.id} column={column} tasks={tasks} />
+        })}
+      </DragDropContext>
     </div>
   );
 }
