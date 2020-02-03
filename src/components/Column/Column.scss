@@ -1,0 +1,12 @@
+.column {
+  margin: 8px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  &__title {
+    font-size: 2rem;
+    padding: 8px;
+  }
+  &__list {
+    padding: 8px;
+  }
+}
