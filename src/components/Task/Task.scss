@@ -4,4 +4,8 @@
   padding: 8px;
   margin-bottom: 8px;
   border-radius: 2px;
+  transition: background-color .2s ease;
+  &--dragging {
+    background-color: lightgreen;
+  }
 }

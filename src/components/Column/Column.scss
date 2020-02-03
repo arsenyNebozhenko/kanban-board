@@ -8,5 +8,9 @@
   }
   &__list {
     padding: 8px;
+    transition: background-color .2s ease;
+    &--dragging-over {
+      background-color: skyblue;
+    }
   }
 }

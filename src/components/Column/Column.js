@@ -8,9 +8,9 @@ const Column = ({ column: { title, id }, tasks }) => {
     <div className="column">
       <h3 className="column__title">{title}</h3>
       <Droppable droppableId={id}>
-        {(provided) => (
+        {(provided, snapshot) => (
           <div 
-            className="column__list" 
+            className={'column__list' + (snapshot.isDraggingOver ? ' column__list--dragging-over' : '')} 
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
